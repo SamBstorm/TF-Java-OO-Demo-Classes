@@ -3,14 +3,9 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Voiture maFerrari = new Voiture();
+        Voiture maFerrari = new Voiture("Renault","Twingo","Rouge",4, 3);
         System.out.printf("Ma voiture est une %s %s de %s avec %d places et %d roues.",maFerrari.Modele,maFerrari.Couleur, maFerrari.Marque,maFerrari.NbPlace,maFerrari.NbRoue);
         System.out.println();
-        maFerrari.Modele = "Twingo";
-        maFerrari.Marque = "Renault";
-        maFerrari.Couleur = "Rouge";
-        maFerrari.NbPlace = 3;
-        maFerrari.NbRoue = 4;
 
         int nbMin = maFerrari.Avancer(25,80);
         System.out.println("il me faut "+nbMin+" minutes pour aller a TFTIC!");
@@ -37,10 +32,7 @@ public class Main {
         System.out.println();
         System.out.printf("Ma voiture est une %s %s de %s avec %d places et %d roues.",laFraise.Modele,laFraise.Couleur, laFraise.Marque,laFraise.NbPlace,laFraise.NbRoue);
 
-        Voiture v1 = new Voiture();
-        v1.Marque = "Peugeot";
-        v1.Modele = "406";
-        v1.Couleur = "blanche";
+        Voiture v1 = new Voiture("Peugeot","406","blanche");
         v1.NbRoue = 5;
         v1.NbPlace = 5;
         System.out.println();

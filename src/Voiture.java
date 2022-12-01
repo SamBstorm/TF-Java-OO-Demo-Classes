@@ -2,9 +2,22 @@ public class Voiture {
     String Marque;
     String Modele;
     Integer NbPlace;
-    Integer NbPassager = 0;
+    Integer NbPassager;
     Integer NbRoue;
     String Couleur;
+
+    public Voiture(String marque, String modele, String couleur){
+        this(marque,modele,couleur,4,4);
+    }
+
+    public Voiture(String marque, String modele, String couleur, int nbRoue, int nbPlace){
+        this.Marque = marque;
+        this.Modele = modele;
+        this.Couleur = couleur;
+        this.NbPassager = 0;
+        this.NbRoue = nbRoue;
+        this.NbPlace = nbPlace;
+    }
 
     public int Avancer(int km, int vitesse){
         return (int)(((float)km / vitesse) * 60);
